@@ -35,8 +35,8 @@ public class BuildingAPI {
 	
 	@GetMapping(value="/api/building")
 	public List<BuildingDTO> findBuilding(@RequestParam (value = "name", required = false) String name, 
-			@RequestParam(value="numberOfBasement", required = false) Long numberOfBasement) {
-		List<BuildingDTO> result = buildingService.findAll(name, numberOfBasement);
+			@RequestParam(value="numberOfBasement", required = false) Long numberofBasement) {
+		List<BuildingDTO> result = buildingService.findAll(name, numberofBasement);
 		return result;
 	}
 //	public void validateData(BuildingDTO buildingDTO) {
